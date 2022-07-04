@@ -1,4 +1,108 @@
 ## STARTING DOCKER and running Prediction ## ** START **
+(.devops) sunil@SunilPersonalLaptop:/mnt/d/Personal/Learnings/Cloud/Udacity Nano Degree for Cloud DevOps/Project-4/project-ml-microservice-kubernetes$ ./run_docker.sh
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=udacityproject4&target=&ulimits=null&version=1": dial unix /var/run/docker.sock: connect: permission denied
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/json": dial unix /var/run/docker.sock: connect: permission denied
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+(.devops) sunil@SunilPersonalLaptop:/mnt/d/Personal/Learnings/Cloud/Udacity Nano Degree for Cloud DevOps/Project-4/project-ml-microservice-kubernetes$ sudo ./run_docker.sh
+Sending build context to Docker daemon  1.061MB
+Step 1/6 : FROM python:3.7.3-stretch
+3.7.3-stretch: Pulling from library/python
+6f2f362378c5: Pull complete
+494c27a8a6b8: Pull complete
+7596bb83081b: Pull complete
+372744b62d49: Pull complete
+615db220d76c: Pull complete
+39aa0c89bda1: Pull complete
+ac275157d894: Pull complete
+98d16dec829a: Pull complete
+c8514b1c6524: Pull complete
+Digest: sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779
+Status: Downloaded newer image for python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Running in c8d1ebcc3279
+Removing intermediate container c8d1ebcc3279
+ ---> 837b607f0243
+Step 3/6 : COPY . app.py /app/
+ ---> e4b6ad585c1e
+Step 4/6 : RUN pip install --upgrade pip &&    pip install --trusted-host pypi.python.org -r requirements.txt
+ ---> Running in 8ccb6c59f672
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/96/2f/caec18213f6a67852f6997fb0673ae08d2e93d1b81573edb93ba4ef06970/pip-22.1.2-py3-none-any.whl (2.1MB)
+Installing collected packages: pip
+  Found existing installation: pip 19.1.1
+    Uninstalling pip-19.1.1:
+      Successfully uninstalled pip-19.1.1
+Successfully installed pip-22.1.2
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.3/81.3 kB 3.9 MB/s eta 0:00:00
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.4/91.4 kB 11.1 MB/s eta 0:00:00
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+  Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 5.0 MB/s eta 0:00:00
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl (33 kB)
+Collecting numpy==1.17.2
+  Downloading numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.3/20.3 MB 2.4 MB/s eta 0:00:00
+Collecting pandas==0.24.2
+  Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 2.9 MB/s eta 0:00:00
+Collecting python-dateutil==2.8.0
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.8/226.8 kB 6.6 MB/s eta 0:00:00
+Collecting pytz==2019.3
+  Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 6.0 MB/s eta 0:00:00
+Collecting scikit-learn==0.20.3
+  Downloading scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 3.2 MB/s eta 0:00:00
+Collecting scipy==1.3.1
+  Downloading scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.2/25.2 MB 2.6 MB/s eta 0:00:00
+Collecting six==1.12.0
+  Downloading six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting Werkzeug==0.16.0
+  Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 327.3/327.3 kB 4.5 MB/s eta 0:00:00
+Collecting pylint==2.4.4
+  Downloading pylint-2.4.4-py3-none-any.whl (302 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.0/303.0 kB 7.5 MB/s eta 0:00:00
+Collecting astroid<2.4,>=2.3.0
+  Downloading astroid-2.3.3-py3-none-any.whl (205 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 205.7/205.7 kB 8.6 MB/s eta 0:00:00
+Collecting isort<5,>=4.2.5
+  Downloading isort-4.3.21-py2.py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 6.9 MB/s eta 0:00:00
+Collecting mccabe<0.7,>=0.6
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting typed-ast<1.5,>=1.4.0
+  Downloading typed_ast-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (743 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 743.4/743.4 kB 6.0 MB/s eta 0:00:00
+Collecting lazy-object-proxy==1.4.*
+  Downloading lazy_object_proxy-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 kB 5.3 MB/s eta 0:00:00
+Collecting wrapt==1.11.*
+  Downloading wrapt-1.11.2.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl size=71325 sha256=98fc5e5d2bc42a712e60b4acfcb62c87e19f30aaad88c46512966cac1bb53ff2
+  Stored in directory: /root/.cache/pip/wheels/23/5f/62/304b411f20be41821465a82bc98baabc5e68c3cdd1eb99db71
+Successfully built wrapt
+Installing collected packages: wrapt, typed-ast, pytz, mccabe, Werkzeug, six, numpy, MarkupSafe, lazy-object-proxy, itsdangerous, isort, Click, scipy, python-dateutil, Jinja2, astroid, scikit-learn, pylint, pandas, Flask
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 astroid-2.3.3 isort-4.3.21 itsdangerous-1.1.0 lazy-object-proxy-1.4.3 mccabe-0.6.1 numpy-1.17.2 pandas-0.24.2 pylint-2.4.4 python-dateutil-2.8.0 pytz-2019.3 scikit-learn-0.20.3 scipy-1.3.1 six-1.12.0 typed-ast-1.4.3 wrapt-1.11.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Removing intermediate container 8ccb6c59f672
+ ---> e9700ecff7e7
 Step 5/6 : EXPOSE 80
  ---> Running in 90a3e611e1fc
 Removing intermediate container 90a3e611e1fc
@@ -33,3 +137,27 @@ Port: 8000
 }
 
 ## Prediction ## ** END **
+
+## Docker hub upload ## ** START **
+
+Login Succeeded
+Sunil Docker ID and Image: mrsunilmehta/udacitysunil
+Using default tag: latest
+The push refers to repository [docker.io/mrsunilmehta/udacitysunil]
+25edd62b7b25: Preparing                                                                                                     
+25edd62b7b25: Pushed
+86831d726831: Pushed
+799a7872c8c7: Mounted from library/python
+715450468940: Mounted from library/python
+c9d608035aef: Mounted from library/python
+bb9c02680a15: Mounted from library/python
+a637c551a0da: Mounted from library/python
+2c8d31157b81: Mounted from library/python
+7b76d801397d: Mounted from library/python
+f32868cde90b: Mounted from library/python
+0db06dff9d9a: Mounted from library/python
+latest: digest: sha256:c1813d70412453d7a5582a09bea00101643c0fb78e3b120ac67f87bd0c128b65 size: 2848
+
+## Docker hub upload ## ** END **
+
+
