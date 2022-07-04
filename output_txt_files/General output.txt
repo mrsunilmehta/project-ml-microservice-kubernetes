@@ -1,3 +1,4 @@
+## STARTING DOCKER and running Prediction ## ** START **
 Step 5/6 : EXPOSE 80
  ---> Running in 90a3e611e1fc
 Removing intermediate container 90a3e611e1fc
@@ -20,3 +21,15 @@ Step 6/6 : CMD ["python", "app.py"]
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
 172.17.0.1 - - [04/Jul/2022 08:49:10] "POST /predict HTTP/1.1" 200 -
+## STARTING DOCKER and running Prediction ## ** END **
+
+## Prediction ## ** START **
+sunil@SunilPersonalLaptop:/mnt/d/Personal/Learnings/Cloud/Udacity Nano Degree for Cloud DevOps/Project-4/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+## Prediction ## ** END **
