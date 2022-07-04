@@ -1,0 +1,586 @@
+* 
+* ==> Audit <==
+* |---------|-------------------------|----------|-------|---------|---------------------|----------|
+| Command |          Args           | Profile  | User  | Version |     Start Time      | End Time |
+|---------|-------------------------|----------|-------|---------|---------------------|----------|
+| start   |                         | minikube | sunil | v1.26.0 | 04 Jul 22 19:18 IST |          |
+| start   |                         | minikube | sunil | v1.26.0 | 04 Jul 22 19:19 IST |          |
+| start   | --force --driver=docker | minikube | sunil | v1.26.0 | 04 Jul 22 19:26 IST |          |
+|---------|-------------------------|----------|-------|---------|---------------------|----------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/07/04 19:26:23
+Running on machine: SunilPersonalLaptop
+Binary: Built with gc go1.18.3 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0704 19:26:23.523482    4142 out.go:296] Setting OutFile to fd 1 ...
+I0704 19:26:23.523951    4142 out.go:348] isatty.IsTerminal(1) = true
+I0704 19:26:23.523958    4142 out.go:309] Setting ErrFile to fd 2...
+I0704 19:26:23.523965    4142 out.go:348] isatty.IsTerminal(2) = true
+I0704 19:26:23.524507    4142 root.go:329] Updating PATH: /home/sunil/.minikube/bin
+W0704 19:26:23.524889    4142 root.go:307] Error reading config file at /home/sunil/.minikube/config/config.json: open /home/sunil/.minikube/config/config.json: no such file or directory
+I0704 19:26:23.524970    4142 out.go:303] Setting JSON to false
+I0704 19:26:23.525537    4142 start.go:115] hostinfo: {"hostname":"SunilPersonalLaptop","uptime":39701,"bootTime":1656903283,"procs":23,"os":"linux","platform":"ubuntu","platformFamily":"debian","platformVersion":"20.04","kernelVersion":"5.10.16.3-microsoft-standard-WSL2","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"guest","hostId":"0d84434a-5e81-8500-d6d1-143262c24f96"}
+I0704 19:26:23.525599    4142 start.go:125] virtualization:  guest
+I0704 19:26:23.528160    4142 out.go:177] 😄  minikube v1.26.0 on Ubuntu 20.04 (amd64)
+W0704 19:26:23.531054    4142 out.go:239] ❗  minikube skips various validations when --force is supplied; this may lead to unexpected behavior
+W0704 19:26:23.531095    4142 preload.go:295] Failed to list preload files: open /home/sunil/.minikube/cache/preloaded-tarball: no such file or directory
+I0704 19:26:23.531109    4142 notify.go:193] Checking for updates...
+I0704 19:26:23.531258    4142 driver.go:360] Setting default libvirt URI to qemu:///system
+W0704 19:26:23.687541    4142 docker.go:113] docker version returned error: exit status 1
+I0704 19:26:23.689268    4142 out.go:177] ✨  Using the docker driver based on user configuration
+I0704 19:26:23.690808    4142 start.go:284] selected driver: docker
+I0704 19:26:23.690817    4142 start.go:805] validating driver "docker" against <nil>
+I0704 19:26:23.690830    4142 start.go:816] status for docker: {Installed:true Healthy:false Running:true NeedsImprovement:false Error:"docker version --format {{.Server.Os}}-{{.Server.Version}}" exit status 1: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/version": dial unix /var/run/docker.sock: connect: permission denied Reason:PROVIDER_DOCKER_NEWGRP Fix:Add your user to the 'docker' group: 'sudo usermod -aG docker $USER && newgrp docker' Doc:https://docs.docker.com/engine/install/linux-postinstall/ Version:}
+I0704 19:26:23.692508    4142 out.go:177] 
+W0704 19:26:23.694134    4142 out.go:239] 💣  "docker version --format {{.Server.Os}}-{{.Server.Version}}" exit status 1: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!!(MISSING)F(MISSING)var%!!(MISSING)F(MISSING)run%!!(MISSING)F(MISSING)docker.sock/v1.24/version": dial unix /var/run/docker.sock: connect: permission denied
+W0704 19:26:23.694394    4142 out.go:239] 💡  Suggestion: Add your user to the 'docker' group: 'sudo usermod -aG docker $USER && newgrp docker'
+W0704 19:26:23.694475    4142 out.go:239] 📘  Documentation: https://docs.docker.com/engine/install/linux-postinstall/
+I0704 19:26:23.696468    4142 out.go:177] 
+I0704 19:26:23.699276    4142 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0704 19:26:24.008842    4142 info.go:265] docker info: {ID: Containers:0 ContainersRunning:0 ContainersPaused:0 ContainersStopped:0 Images:0 Driver: DriverStatus:[] SystemStatus:<nil> Plugins:{Volume:[] Network:[] Authorization:<nil> Log:[]} MemoryLimit:false SwapLimit:false KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:false CPUCfsQuota:false CPUShares:false CPUSet:false PidsLimit:false IPv4Forwarding:false BridgeNfIptables:false BridgeNfIP6Tables:false Debug:false NFd:0 OomKillDisable:false NGoroutines:0 SystemTime:0001-01-01 00:00:00 +0000 UTC LoggingDriver: CgroupDriver: NEventsListener:0 KernelVersion: OperatingSystem: OSType: Architecture: IndexServerAddress: RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[] IndexConfigs:{DockerIo:{Name: Mirrors:[] Secure:false Official:false}} Mirrors:[]} NCPU:0 MemTotal:0 GenericResources:<nil> DockerRootDir: HTTPProxy: HTTPSProxy: NoProxy: Name: Labels:[] ExperimentalBuild:false ServerVersion: ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:}} DefaultRuntime: Swarm:{NodeID: NodeAddr: LocalNodeState: ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary: ContainerdCommit:{ID: Expected:} RuncCommit:{ID: Expected:} InitCommit:{ID: Expected:} SecurityOptions:[] ProductLicense: Warnings:<nil> ServerErrors:[Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/info": dial unix /var/run/docker.sock: connect: permission denied] ClientInfo:{Debug:false Plugins:[map[Experimental:true Name:app Path:/usr/libexec/docker/cli-plugins/docker-app SchemaVersion:0.1.0 ShortDescription:Docker App Vendor:Docker Inc. Version:v0.9.1-beta3] map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.8.2-docker] map[Name:scan Path:/usr/libexec/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.17.0]] Warnings:<nil>}}
+I0704 19:26:24.010761    4142 out.go:177] 
+W0704 19:26:24.012567    4142 out.go:239] ⛔  Requested cpu count 2 is greater than the available cpus of 0
+I0704 19:26:24.014216    4142 out.go:177] 
+I0704 19:26:24.016123    4142 out.go:177] 
+W0704 19:26:24.017816    4142 out.go:239] ⛔  Docker has less than 2 CPUs available, but Kubernetes requires at least 2 to be available
+I0704 19:26:24.019796    4142 out.go:177] 
+I0704 19:26:24.021725    4142 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0704 19:26:24.344798    4142 info.go:265] docker info: {ID: Containers:0 ContainersRunning:0 ContainersPaused:0 ContainersStopped:0 Images:0 Driver: DriverStatus:[] SystemStatus:<nil> Plugins:{Volume:[] Network:[] Authorization:<nil> Log:[]} MemoryLimit:false SwapLimit:false KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:false CPUCfsQuota:false CPUShares:false CPUSet:false PidsLimit:false IPv4Forwarding:false BridgeNfIptables:false BridgeNfIP6Tables:false Debug:false NFd:0 OomKillDisable:false NGoroutines:0 SystemTime:0001-01-01 00:00:00 +0000 UTC LoggingDriver: CgroupDriver: NEventsListener:0 KernelVersion: OperatingSystem: OSType: Architecture: IndexServerAddress: RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[] IndexConfigs:{DockerIo:{Name: Mirrors:[] Secure:false Official:false}} Mirrors:[]} NCPU:0 MemTotal:0 GenericResources:<nil> DockerRootDir: HTTPProxy: HTTPSProxy: NoProxy: Name: Labels:[] ExperimentalBuild:false ServerVersion: ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:}} DefaultRuntime: Swarm:{NodeID: NodeAddr: LocalNodeState: ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary: ContainerdCommit:{ID: Expected:} RuncCommit:{ID: Expected:} InitCommit:{ID: Expected:} SecurityOptions:[] ProductLicense: Warnings:<nil> ServerErrors:[Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/info": dial unix /var/run/docker.sock: connect: permission denied] ClientInfo:{Debug:false Plugins:[map[Experimental:true Name:app Path:/usr/libexec/docker/cli-plugins/docker-app SchemaVersion:0.1.0 ShortDescription:Docker App Vendor:Docker Inc. Version:v0.9.1-beta3] map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.8.2-docker] map[Name:scan Path:/usr/libexec/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.17.0]] Warnings:<nil>}}
+W0704 19:26:24.344986    4142 out.go:239] ❗  docker is currently using the  storage driver, consider switching to overlay2 for better performance
+I0704 19:26:24.345082    4142 start_flags.go:296] no existing cluster config was found, will generate one from the flags 
+I0704 19:26:24.348597    4142 out.go:177] 
+W0704 19:26:24.350625    4142 out.go:239] ⛔  docker only has 0MiB available, less than the required 1800MiB for Kubernetes
+I0704 19:26:24.352773    4142 out.go:177] 
+I0704 19:26:24.354475    4142 start_flags.go:377] Using suggested 2200MB memory alloc based on sys=7877MB, container=0MB
+I0704 19:26:24.354626    4142 start_flags.go:835] Wait components to verify : map[apiserver:true system_pods:true]
+I0704 19:26:24.356468    4142 out.go:177] 📌  Using Docker driver with root privileges
+I0704 19:26:24.358174    4142 cni.go:95] Creating CNI manager for ""
+I0704 19:26:24.358184    4142 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0704 19:26:24.358209    4142 start_flags.go:310] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.24.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/sunil:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:}
+I0704 19:26:24.360002    4142 out.go:177] 👍  Starting control plane node minikube in cluster minikube
+I0704 19:26:24.361850    4142 cache.go:120] Beginning downloading kic base image for docker with docker
+I0704 19:26:24.363570    4142 out.go:177] 🚜  Pulling base image ...
+I0704 19:26:24.365101    4142 preload.go:132] Checking if preload exists for k8s version v1.24.1 and runtime docker
+I0704 19:26:24.365247    4142 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 in local docker daemon
+I0704 19:26:24.365365    4142 profile.go:148] Saving config to /home/sunil/.minikube/profiles/minikube/config.json ...
+I0704 19:26:24.365398    4142 lock.go:35] WriteFile acquiring /home/sunil/.minikube/profiles/minikube/config.json: {Name:mk1a4a8087f5a4c08cad1a360a6596b1f52d9fcc Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0704 19:26:24.366098    4142 cache.go:107] acquiring lock: {Name:mk45c088a5af27b15b8cc4cb58195f48cd46b8be Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366114    4142 cache.go:107] acquiring lock: {Name:mk8a0391573ec0634a9eb3eff33fa321b19e8022 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366133    4142 cache.go:107] acquiring lock: {Name:mke623c0e28a0b7126b4a75c08184aedefe234fb Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366153    4142 cache.go:107] acquiring lock: {Name:mk2011c2f016a8bebbfa13ec90ffa9c9f9e452cd Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366181    4142 cache.go:107] acquiring lock: {Name:mk9320312e32562daffc61bebe5aa32377a52237 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366211    4142 cache.go:107] acquiring lock: {Name:mke677d405bf9820c675ca26e5eb96f02a5de7b0 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366223    4142 cache.go:107] acquiring lock: {Name:mk85ec183180de227e34e7a1c7aeb8b7083f46b0 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366207    4142 cache.go:107] acquiring lock: {Name:mkaf3e74877dd8fb0973be83e22f13d0587c6a1a Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:26:24.366458    4142 image.go:134] retrieving image: gcr.io/k8s-minikube/storage-provisioner:v5
+I0704 19:26:24.366493    4142 image.go:134] retrieving image: k8s.gcr.io/kube-scheduler:v1.24.1
+I0704 19:26:24.366494    4142 image.go:134] retrieving image: k8s.gcr.io/pause:3.7
+I0704 19:26:24.366494    4142 image.go:134] retrieving image: k8s.gcr.io/kube-apiserver:v1.24.1
+I0704 19:26:24.366495    4142 image.go:134] retrieving image: k8s.gcr.io/kube-controller-manager:v1.24.1
+I0704 19:26:24.366495    4142 image.go:134] retrieving image: k8s.gcr.io/etcd:3.5.3-0
+I0704 19:26:24.366551    4142 image.go:134] retrieving image: k8s.gcr.io/coredns/coredns:v1.8.6
+I0704 19:26:24.366801    4142 image.go:134] retrieving image: k8s.gcr.io/kube-proxy:v1.24.1
+I0704 19:26:24.367530    4142 image.go:177] daemon lookup for k8s.gcr.io/kube-controller-manager:v1.24.1: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/kube-controller-manager:v1.24.1/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.367536    4142 image.go:177] daemon lookup for k8s.gcr.io/coredns/coredns:v1.8.6: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/coredns/coredns:v1.8.6/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.367555    4142 image.go:177] daemon lookup for k8s.gcr.io/kube-apiserver:v1.24.1: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/kube-apiserver:v1.24.1/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.367594    4142 image.go:177] daemon lookup for k8s.gcr.io/kube-scheduler:v1.24.1: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/kube-scheduler:v1.24.1/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.367617    4142 image.go:177] daemon lookup for k8s.gcr.io/kube-proxy:v1.24.1: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/kube-proxy:v1.24.1/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.368058    4142 image.go:177] daemon lookup for gcr.io/k8s-minikube/storage-provisioner:v5: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/gcr.io/k8s-minikube/storage-provisioner:v5/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.368143    4142 image.go:177] daemon lookup for k8s.gcr.io/etcd:3.5.3-0: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/etcd:3.5.3-0/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.367648    4142 image.go:177] daemon lookup for k8s.gcr.io/pause:3.7: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/k8s.gcr.io/pause:3.7/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:26:24.512998    4142 cache.go:147] Downloading gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local cache
+I0704 19:26:24.513170    4142 image.go:59] Checking for gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 in local cache directory
+I0704 19:26:24.513351    4142 image.go:119] Writing gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local cache
+I0704 19:26:26.555153    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/etcd_3.5.3-0
+I0704 19:26:26.558699    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/coredns/coredns_v1.8.6
+I0704 19:26:26.558714    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/pause_3.7
+I0704 19:26:26.641047    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-proxy_v1.24.1
+I0704 19:26:26.649977    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-scheduler_v1.24.1
+I0704 19:26:26.655613    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-apiserver_v1.24.1
+I0704 19:26:26.655642    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-controller-manager_v1.24.1
+I0704 19:26:27.867768    4142 cache.go:161] opening:  /home/sunil/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5
+I0704 19:26:27.887618    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/pause_3.7 exists
+I0704 19:26:27.887683    4142 cache.go:96] cache image "k8s.gcr.io/pause:3.7" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/pause_3.7" took 3.5214853s
+I0704 19:26:27.887825    4142 cache.go:80] save to tar file k8s.gcr.io/pause:3.7 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/pause_3.7 succeeded
+I0704 19:26:49.138232    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5 exists
+I0704 19:26:49.138297    4142 cache.go:96] cache image "gcr.io/k8s-minikube/storage-provisioner:v5" -> "/home/sunil/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5" took 24.7724428s
+I0704 19:26:49.138306    4142 cache.go:80] save to tar file gcr.io/k8s-minikube/storage-provisioner:v5 -> /home/sunil/.minikube/cache/images/amd64/gcr.io/k8s-minikube/storage-provisioner_v5 succeeded
+I0704 19:27:27.533483    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/coredns/coredns_v1.8.6 exists
+I0704 19:27:27.533548    4142 cache.go:96] cache image "k8s.gcr.io/coredns/coredns:v1.8.6" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/coredns/coredns_v1.8.6" took 1m3.1674283s
+I0704 19:27:27.533556    4142 cache.go:80] save to tar file k8s.gcr.io/coredns/coredns:v1.8.6 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/coredns/coredns_v1.8.6 succeeded
+I0704 19:27:37.938088    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-scheduler_v1.24.1 exists
+I0704 19:27:37.938110    4142 cache.go:96] cache image "k8s.gcr.io/kube-scheduler:v1.24.1" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-scheduler_v1.24.1" took 1m13.5724825s
+I0704 19:27:37.938118    4142 cache.go:80] save to tar file k8s.gcr.io/kube-scheduler:v1.24.1 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-scheduler_v1.24.1 succeeded
+I0704 19:28:23.211425    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-controller-manager_v1.24.1 exists
+I0704 19:28:23.211471    4142 cache.go:96] cache image "k8s.gcr.io/kube-controller-manager:v1.24.1" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-controller-manager_v1.24.1" took 1m58.8452149s
+I0704 19:28:23.211483    4142 cache.go:80] save to tar file k8s.gcr.io/kube-controller-manager:v1.24.1 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-controller-manager_v1.24.1 succeeded
+I0704 19:28:26.062683    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-apiserver_v1.24.1 exists
+I0704 19:28:26.062709    4142 cache.go:96] cache image "k8s.gcr.io/kube-apiserver:v1.24.1" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-apiserver_v1.24.1" took 2m1.6963163s
+I0704 19:28:26.062761    4142 cache.go:80] save to tar file k8s.gcr.io/kube-apiserver:v1.24.1 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-apiserver_v1.24.1 succeeded
+I0704 19:28:29.671198    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-proxy_v1.24.1 exists
+I0704 19:28:29.671225    4142 cache.go:96] cache image "k8s.gcr.io/kube-proxy:v1.24.1" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-proxy_v1.24.1" took 2m5.3052919s
+I0704 19:28:29.671234    4142 cache.go:80] save to tar file k8s.gcr.io/kube-proxy:v1.24.1 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/kube-proxy_v1.24.1 succeeded
+I0704 19:29:05.116597    4142 cache.go:156] /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/etcd_3.5.3-0 exists
+I0704 19:29:05.116617    4142 cache.go:96] cache image "k8s.gcr.io/etcd:3.5.3-0" -> "/home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/etcd_3.5.3-0" took 2m40.7502397s
+I0704 19:29:05.116624    4142 cache.go:80] save to tar file k8s.gcr.io/etcd:3.5.3-0 -> /home/sunil/.minikube/cache/images/amd64/k8s.gcr.io/etcd_3.5.3-0 succeeded
+I0704 19:29:05.116678    4142 cache.go:87] Successfully saved all images to host disk.
+I0704 19:30:52.254971    4142 cache.go:150] successfully saved gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 as a tarball
+I0704 19:30:52.255053    4142 cache.go:161] Loading gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 from local cache
+I0704 19:30:52.257417    4142 cache.go:170] Downloading gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local daemon
+I0704 19:30:52.258008    4142 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 in local docker daemon
+I0704 19:30:52.407753    4142 image.go:243] Writing gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local daemon
+I0704 19:30:54.029685    4142 cache.go:182] failed to download gcr.io/k8s-minikube/kicbase:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95, will try fallback image if available: writing daemon image: error loading image: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/load?quiet=0": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:30:54.029798    4142 image.go:75] Checking for docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 in local docker daemon
+I0704 19:30:54.191100    4142 cache.go:147] Downloading docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local cache
+I0704 19:30:54.191272    4142 image.go:59] Checking for docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 in local cache directory
+I0704 19:30:54.191300    4142 image.go:119] Writing docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local cache
+I0704 19:35:23.553396    4142 cache.go:150] successfully saved docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 as a tarball
+I0704 19:35:23.553428    4142 cache.go:161] Loading docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 from local cache
+I0704 19:35:23.554456    4142 cache.go:170] Downloading docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local daemon
+I0704 19:35:23.554631    4142 image.go:75] Checking for docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 in local docker daemon
+I0704 19:35:23.683633    4142 image.go:243] Writing docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95 to local daemon
+I0704 19:35:25.562713    4142 cache.go:182] failed to download docker.io/kicbase/stable:v0.0.32@sha256:9190bd2393eae887316c97a74370b7d5dad8f0b2ef91ac2662bc36f7ef8e0b95, will try fallback image if available: writing daemon image: error loading image: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/load?quiet=0": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:35:25.562751    4142 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.32 in local docker daemon
+I0704 19:35:25.732509    4142 cache.go:147] Downloading gcr.io/k8s-minikube/kicbase:v0.0.32 to local cache
+I0704 19:35:25.732683    4142 image.go:59] Checking for gcr.io/k8s-minikube/kicbase:v0.0.32 in local cache directory
+I0704 19:35:25.732701    4142 image.go:119] Writing gcr.io/k8s-minikube/kicbase:v0.0.32 to local cache
+I0704 19:37:57.354944    4142 cache.go:150] successfully saved gcr.io/k8s-minikube/kicbase:v0.0.32 as a tarball
+I0704 19:37:57.354967    4142 cache.go:161] Loading gcr.io/k8s-minikube/kicbase:v0.0.32 from local cache
+I0704 19:37:57.358696    4142 cache.go:170] Downloading gcr.io/k8s-minikube/kicbase:v0.0.32 to local daemon
+I0704 19:37:57.359584    4142 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.32 in local docker daemon
+I0704 19:37:57.514542    4142 image.go:243] Writing gcr.io/k8s-minikube/kicbase:v0.0.32 to local daemon
+I0704 19:37:59.081892    4142 cache.go:182] failed to download gcr.io/k8s-minikube/kicbase:v0.0.32, will try fallback image if available: writing daemon image: error loading image: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/load?quiet=0": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:37:59.081927    4142 image.go:75] Checking for docker.io/kicbase/stable:v0.0.32 in local docker daemon
+I0704 19:37:59.211183    4142 cache.go:147] Downloading docker.io/kicbase/stable:v0.0.32 to local cache
+I0704 19:37:59.211350    4142 image.go:59] Checking for docker.io/kicbase/stable:v0.0.32 in local cache directory
+I0704 19:37:59.211366    4142 image.go:119] Writing docker.io/kicbase/stable:v0.0.32 to local cache
+I0704 19:40:44.052280    4142 cache.go:150] successfully saved docker.io/kicbase/stable:v0.0.32 as a tarball
+I0704 19:40:44.052288    4142 cache.go:161] Loading docker.io/kicbase/stable:v0.0.32 from local cache
+I0704 19:40:44.053021    4142 cache.go:170] Downloading docker.io/kicbase/stable:v0.0.32 to local daemon
+I0704 19:40:44.053208    4142 image.go:75] Checking for docker.io/kicbase/stable:v0.0.32 in local docker daemon
+I0704 19:40:44.236219    4142 image.go:243] Writing docker.io/kicbase/stable:v0.0.32 to local daemon
+I0704 19:40:48.428228    4142 cache.go:182] failed to download docker.io/kicbase/stable:v0.0.32, will try fallback image if available: writing daemon image: error loading image: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/images/load?quiet=0": dial unix /var/run/docker.sock: connect: permission denied
+W0704 19:40:48.428254    4142 out.go:239] ❗  minikube was unable to download gcr.io/k8s-minikube/kicbase:v0.0.32, but successfully downloaded docker.io/kicbase/stable:v0.0.32 as a fallback image
+E0704 19:40:48.428364    4142 cache.go:203] Error downloading kic artifacts:  failed to download kic base image or any fallback image
+I0704 19:40:48.428382    4142 cache.go:208] Successfully downloaded all kic artifacts
+I0704 19:40:48.428521    4142 start.go:352] acquiring machines lock for minikube: {Name:mkcca7dbff6e433b592895da6fea6727ea5879ef Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:40:48.428669    4142 start.go:356] acquired machines lock for "minikube" in 131.8µs
+I0704 19:40:48.430260    4142 start.go:91] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:docker.io/kicbase/stable:v0.0.32 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.24.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.24.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/sunil:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:} &{Name: IP: Port:8443 KubernetesVersion:v1.24.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0704 19:40:48.430361    4142 start.go:131] createHost starting for "" (driver="docker")
+I0704 19:40:48.434060    4142 out.go:204] 🔥  Creating docker container (CPUs=2, Memory=2200MB) ...
+I0704 19:40:48.435086    4142 start.go:165] libmachine.API.Create for "minikube" (driver="docker")
+I0704 19:40:48.435118    4142 client.go:168] LocalClient.Create starting
+I0704 19:40:48.435629    4142 main.go:134] libmachine: Creating CA: /home/sunil/.minikube/certs/ca.pem
+I0704 19:40:48.492794    4142 main.go:134] libmachine: Creating client certificate: /home/sunil/.minikube/certs/cert.pem
+I0704 19:40:48.641037    4142 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0704 19:40:48.814802    4142 cli_runner.go:211] docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0704 19:40:48.814941    4142 network_create.go:272] running [docker network inspect minikube] to gather additional debugging logs...
+I0704 19:40:48.814970    4142 cli_runner.go:164] Run: docker network inspect minikube
+W0704 19:40:48.959298    4142 cli_runner.go:211] docker network inspect minikube returned with exit code 1
+I0704 19:40:48.959312    4142 network_create.go:275] error running [docker network inspect minikube]: docker network inspect minikube: exit status 1
+stdout:
+[]
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:48.959320    4142 network_create.go:277] output of [docker network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+
+** /stderr **
+I0704 19:40:48.959354    4142 cli_runner.go:164] Run: docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0704 19:40:49.099271    4142 cli_runner.go:211] docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0704 19:40:49.099312    4142 network_create.go:272] running [docker network inspect bridge] to gather additional debugging logs...
+I0704 19:40:49.099324    4142 cli_runner.go:164] Run: docker network inspect bridge
+W0704 19:40:49.302951    4142 cli_runner.go:211] docker network inspect bridge returned with exit code 1
+I0704 19:40:49.302972    4142 network_create.go:275] error running [docker network inspect bridge]: docker network inspect bridge: exit status 1
+stdout:
+[]
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/bridge": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:49.302984    4142 network_create.go:277] output of [docker network inspect bridge]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/bridge": dial unix /var/run/docker.sock: connect: permission denied
+
+** /stderr **
+W0704 19:40:49.303103    4142 network_create.go:84] failed to get mtu information from the docker's default network "bridge": docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}": exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/bridge": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:49.303555    4142 network.go:288] reserving subnet 192.168.49.0 for 1m0s: &{mu:{state:0 sema:0} read:{v:{m:map[] amended:true}} dirty:map[192.168.49.0:0xc0006c4bb0] misses:0}
+I0704 19:40:49.303576    4142 network.go:235] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I0704 19:40:49.303610    4142 network_create.go:115] attempt to create docker network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 0 ...
+I0704 19:40:49.303645    4142 cli_runner.go:164] Run: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+W0704 19:40:49.446123    4142 cli_runner.go:211] docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube returned with exit code 1
+E0704 19:40:49.446167    4142 network_create.go:104] error while trying to create docker network minikube 192.168.49.0/24: create docker network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 0: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/create": dial unix /var/run/docker.sock: connect: permission denied
+W0704 19:40:49.446334    4142 out.go:239] ❗  Unable to create dedicated network, this might result in cluster IP change after restart: un-retryable: create docker network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 0: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/create": dial unix /var/run/docker.sock: connect: permission denied
+
+I0704 19:40:49.446484    4142 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+W0704 19:40:49.592253    4142 cli_runner.go:211] docker ps -a --format {{.Names}} returned with exit code 1
+W0704 19:40:49.592270    4142 kic.go:149] failed to check if container already exists: docker ps -a --format {{.Names}}: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/json?all=1": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:49.592329    4142 cli_runner.go:164] Run: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+W0704 19:40:49.731251    4142 cli_runner.go:211] docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true returned with exit code 1
+I0704 19:40:49.731384    4142 client.go:171] LocalClient.Create took 1.296262s
+I0704 19:40:51.732549    4142 start.go:134] duration metric: createHost completed in 3.3021788s
+I0704 19:40:51.732560    4142 start.go:81] releasing machines lock for "minikube", held for 3.303885s
+W0704 19:40:51.732582    4142 start.go:599] error starting host: creating host: create: creating: setting up container node: creating volume for minikube container: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/volumes/create": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:51.732992    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:51.863998    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:40:51.864115    4142 delete.go:82] Unable to get host status for minikube, assuming it has already been deleted: state: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+W0704 19:40:51.864315    4142 out.go:239] 🤦  StartHost failed, but will try again: creating host: create: creating: setting up container node: creating volume for minikube container: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/volumes/create": dial unix /var/run/docker.sock: connect: permission denied
+
+I0704 19:40:51.864362    4142 start.go:614] Will try again in 5 seconds ...
+I0704 19:40:56.867549    4142 start.go:352] acquiring machines lock for minikube: {Name:mkcca7dbff6e433b592895da6fea6727ea5879ef Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0704 19:40:56.867658    4142 start.go:356] acquired machines lock for "minikube" in 82.6µs
+I0704 19:40:56.867670    4142 start.go:94] Skipping create...Using existing machine configuration
+I0704 19:40:56.867673    4142 fix.go:55] fixHost starting: 
+I0704 19:40:56.867854    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:57.032311    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:40:57.032343    4142 fix.go:103] recreateIfNeeded on minikube: state= err=unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:57.032353    4142 fix.go:108] machineExists: false. err=machine does not exist
+I0704 19:40:57.034519    4142 out.go:177] 🤷  docker "minikube" container is missing, will recreate.
+I0704 19:40:57.036173    4142 delete.go:124] DEMOLISHING minikube ...
+I0704 19:40:57.036215    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:57.198956    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+W0704 19:40:57.198986    4142 stop.go:75] unable to get state: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:57.198997    4142 delete.go:129] stophost failed (probably ok): ssh power off: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:57.199747    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:57.376211    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:40:57.376248    4142 delete.go:82] Unable to get host status for minikube, assuming it has already been deleted: state: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:57.376285    4142 cli_runner.go:164] Run: docker container inspect -f {{.Id}} minikube
+W0704 19:40:57.520826    4142 cli_runner.go:211] docker container inspect -f {{.Id}} minikube returned with exit code 1
+I0704 19:40:57.520841    4142 kic.go:356] could not find the container minikube to remove it. will try anyways
+I0704 19:40:57.520873    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:57.663457    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+W0704 19:40:57.663575    4142 oci.go:84] error getting container status, will try to delete anyways: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:57.663614    4142 cli_runner.go:164] Run: docker exec --privileged -t minikube /bin/bash -c "sudo init 0"
+W0704 19:40:57.798003    4142 cli_runner.go:211] docker exec --privileged -t minikube /bin/bash -c "sudo init 0" returned with exit code 1
+I0704 19:40:57.798119    4142 oci.go:646] error shutdown minikube: docker exec --privileged -t minikube /bin/bash -c "sudo init 0": exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:58.799249    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:58.930528    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:40:58.930559    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:58.930564    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:40:58.930632    4142 retry.go:31] will retry after 552.330144ms: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:59.483372    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:40:59.623878    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:40:59.623909    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:40:59.623914    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:40:59.623945    4142 retry.go:31] will retry after 1.080381816s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:00.705285    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:41:00.864366    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:41:00.864398    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:00.864404    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:41:00.864422    4142 retry.go:31] will retry after 1.31013006s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:02.175952    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:41:02.335471    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:41:02.335502    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:02.335508    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:41:02.335525    4142 retry.go:31] will retry after 1.582392691s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:03.918561    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:41:04.073054    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:41:04.073119    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:04.073124    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:41:04.073140    4142 retry.go:31] will retry after 2.340488664s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:06.415701    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:41:06.599659    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:41:06.599690    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:06.599695    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:41:06.599711    4142 retry.go:31] will retry after 4.506218855s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:11.107384    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:41:11.333741    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:41:11.333777    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:11.333783    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:41:11.333804    4142 retry.go:31] will retry after 3.221479586s: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:14.555973    4142 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0704 19:41:14.906338    4142 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0704 19:41:14.906373    4142 oci.go:658] temporary error verifying shutdown: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:14.906381    4142 oci.go:660] temporary error: container minikube status is  but expect it to be exited
+I0704 19:41:14.906408    4142 oci.go:88] couldn't shut down minikube (might be okay): verify shutdown: couldn't verify container is exited. %!v(MISSING): unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/minikube/json": dial unix /var/run/docker.sock: connect: permission denied
+ 
+I0704 19:41:14.906440    4142 cli_runner.go:164] Run: docker rm -f -v minikube
+W0704 19:41:15.071225    4142 cli_runner.go:211] docker rm -f -v minikube returned with exit code 1
+I0704 19:41:15.071335    4142 cli_runner.go:164] Run: docker container inspect -f {{.Id}} minikube
+W0704 19:41:15.257972    4142 cli_runner.go:211] docker container inspect -f {{.Id}} minikube returned with exit code 1
+I0704 19:41:15.258068    4142 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0704 19:41:15.453195    4142 cli_runner.go:211] docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0704 19:41:15.453237    4142 network_create.go:272] running [docker network inspect minikube] to gather additional debugging logs...
+I0704 19:41:15.453248    4142 cli_runner.go:164] Run: docker network inspect minikube
+W0704 19:41:15.610801    4142 cli_runner.go:211] docker network inspect minikube returned with exit code 1
+I0704 19:41:15.610816    4142 network_create.go:275] error running [docker network inspect minikube]: docker network inspect minikube: exit status 1
+stdout:
+[]
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:15.610828    4142 network_create.go:277] output of [docker network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+
+** /stderr **
+W0704 19:41:15.610858    4142 network_create.go:302] Error inspecting docker network minikube: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}": exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+W0704 19:41:15.610957    4142 delete.go:139] delete failed (probably ok) <nil>
+I0704 19:41:15.610964    4142 fix.go:115] Sleeping 1 second for extra luck!
+I0704 19:41:16.611109    4142 start.go:131] createHost starting for "" (driver="docker")
+I0704 19:41:16.615105    4142 out.go:204] 🔥  Creating docker container (CPUs=2, Memory=2200MB) ...
+I0704 19:41:16.615278    4142 start.go:165] libmachine.API.Create for "minikube" (driver="docker")
+I0704 19:41:16.615344    4142 client.go:168] LocalClient.Create starting
+I0704 19:41:16.615439    4142 main.go:134] libmachine: Reading certificate data from /home/sunil/.minikube/certs/ca.pem
+I0704 19:41:16.615480    4142 main.go:134] libmachine: Decoding PEM data...
+I0704 19:41:16.615492    4142 main.go:134] libmachine: Parsing certificate...
+I0704 19:41:16.615559    4142 main.go:134] libmachine: Reading certificate data from /home/sunil/.minikube/certs/cert.pem
+I0704 19:41:16.615587    4142 main.go:134] libmachine: Decoding PEM data...
+I0704 19:41:16.615595    4142 main.go:134] libmachine: Parsing certificate...
+I0704 19:41:16.615829    4142 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0704 19:41:16.802194    4142 cli_runner.go:211] docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0704 19:41:16.802233    4142 network_create.go:272] running [docker network inspect minikube] to gather additional debugging logs...
+I0704 19:41:16.802244    4142 cli_runner.go:164] Run: docker network inspect minikube
+W0704 19:41:16.987679    4142 cli_runner.go:211] docker network inspect minikube returned with exit code 1
+I0704 19:41:16.987695    4142 network_create.go:275] error running [docker network inspect minikube]: docker network inspect minikube: exit status 1
+stdout:
+[]
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:16.987706    4142 network_create.go:277] output of [docker network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/minikube": dial unix /var/run/docker.sock: connect: permission denied
+
+** /stderr **
+I0704 19:41:16.987746    4142 cli_runner.go:164] Run: docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0704 19:41:17.186184    4142 cli_runner.go:211] docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0704 19:41:17.186229    4142 network_create.go:272] running [docker network inspect bridge] to gather additional debugging logs...
+I0704 19:41:17.186240    4142 cli_runner.go:164] Run: docker network inspect bridge
+W0704 19:41:17.380511    4142 cli_runner.go:211] docker network inspect bridge returned with exit code 1
+I0704 19:41:17.380530    4142 network_create.go:275] error running [docker network inspect bridge]: docker network inspect bridge: exit status 1
+stdout:
+[]
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/bridge": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:17.380543    4142 network_create.go:277] output of [docker network inspect bridge]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/bridge": dial unix /var/run/docker.sock: connect: permission denied
+
+** /stderr **
+W0704 19:41:17.380552    4142 network_create.go:84] failed to get mtu information from the docker's default network "bridge": docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}": exit status 1
+stdout:
+
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/bridge": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:17.381077    4142 network.go:279] skipping subnet 192.168.49.0 that has unexpired reservation: &{mu:{state:0 sema:0} read:{v:{m:map[192.168.49.0:0xc0006c4bb0] amended:false}} dirty:map[] misses:0}
+I0704 19:41:17.381135    4142 network.go:238] skipping subnet 192.168.49.0/24 that is reserved: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I0704 19:41:17.381448    4142 network.go:288] reserving subnet 192.168.58.0 for 1m0s: &{mu:{state:0 sema:0} read:{v:{m:map[192.168.49.0:0xc0006c4bb0] amended:true}} dirty:map[192.168.49.0:0xc0006c4bb0 192.168.58.0:0xc0006c47f8] misses:0}
+I0704 19:41:17.381461    4142 network.go:235] using free private subnet 192.168.58.0/24: &{IP:192.168.58.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.58.0/24 Gateway:192.168.58.1 ClientMin:192.168.58.2 ClientMax:192.168.58.254 Broadcast:192.168.58.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I0704 19:41:17.381468    4142 network_create.go:115] attempt to create docker network minikube 192.168.58.0/24 with gateway 192.168.58.1 and MTU of 0 ...
+I0704 19:41:17.381501    4142 cli_runner.go:164] Run: docker network create --driver=bridge --subnet=192.168.58.0/24 --gateway=192.168.58.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+W0704 19:41:17.555574    4142 cli_runner.go:211] docker network create --driver=bridge --subnet=192.168.58.0/24 --gateway=192.168.58.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube returned with exit code 1
+E0704 19:41:17.555606    4142 network_create.go:104] error while trying to create docker network minikube 192.168.58.0/24: create docker network minikube 192.168.58.0/24 with gateway 192.168.58.1 and MTU of 0: docker network create --driver=bridge --subnet=192.168.58.0/24 --gateway=192.168.58.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/create": dial unix /var/run/docker.sock: connect: permission denied
+W0704 19:41:17.555893    4142 out.go:239] ❗  Unable to create dedicated network, this might result in cluster IP change after restart: un-retryable: create docker network minikube 192.168.58.0/24 with gateway 192.168.58.1 and MTU of 0: docker network create --driver=bridge --subnet=192.168.58.0/24 --gateway=192.168.58.1 -o --ip-masq -o --icc --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/networks/create": dial unix /var/run/docker.sock: connect: permission denied
+
+I0704 19:41:17.556090    4142 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+W0704 19:41:17.801900    4142 cli_runner.go:211] docker ps -a --format {{.Names}} returned with exit code 1
+W0704 19:41:17.801917    4142 kic.go:149] failed to check if container already exists: docker ps -a --format {{.Names}}: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/containers/json?all=1": dial unix /var/run/docker.sock: connect: permission denied
+I0704 19:41:17.801952    4142 cli_runner.go:164] Run: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+W0704 19:41:17.979566    4142 cli_runner.go:211] docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true returned with exit code 1
+I0704 19:41:17.979597    4142 client.go:171] LocalClient.Create took 1.3642473s
+I0704 19:41:19.980727    4142 start.go:134] duration metric: createHost completed in 3.3696039s
+I0704 19:41:19.980742    4142 fix.go:57] fixHost completed within 23.1131546s
+I0704 19:41:19.980755    4142 start.go:81] releasing machines lock for "minikube", held for 23.1131669s
+W0704 19:41:19.980892    4142 out.go:239] 😿  Failed to start docker container. Running "minikube delete" may fix it: recreate: creating host: create: creating: setting up container node: creating volume for minikube container: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/volumes/create": dial unix /var/run/docker.sock: connect: permission denied
+
+I0704 19:41:19.983263    4142 out.go:177] 
+W0704 19:41:19.985254    4142 out.go:239] ❌  Exiting due to GUEST_PROVISION: Failed to start host: recreate: creating host: create: creating: setting up container node: creating volume for minikube container: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true: exit status 1
+stdout:
+
+stderr:
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%!F(MISSING)var%!F(MISSING)run%!F(MISSING)docker.sock/v1.24/volumes/create": dial unix /var/run/docker.sock: connect: permission denied
+
+W0704 19:41:19.985305    4142 out.go:239] 
+W0704 19:41:19.986385    4142 out.go:239] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I0704 19:41:19.988948    4142 out.go:177] 
+
+* 
