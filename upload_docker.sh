@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="mrsunilmehta/udacitysunil"
+dockerpath="mrsunilmehta/sunilmehta"
 
 # Step 2:  
 # Authenticate & tag
