@@ -8,6 +8,7 @@ dockerpath="mrsunilmehta/sunilmehta:latest"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
+docker login -u mrsunilmehta
 kubectl run udacitymehta --image=$dockerpath --port=80
 
 # Step 3:
