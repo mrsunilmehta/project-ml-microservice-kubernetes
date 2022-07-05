@@ -5,11 +5,12 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="mrsunilmehta/sunilmehta"
+dockerpath=mrsunilmehta/udacityproject4
 
 # Step 2:  
 # Authenticate & tag
-docker login --username "mrsunilmehta" && docker image tag udacityproject4 $dockerpath
+docker login -u mrsunilmehta
+docker tag udacityproject4 $dockerpath
 echo "Sunil Docker ID and Image: $dockerpath"
 
 # Step 3:
